@@ -1,0 +1,13 @@
+set -e
+# build 專案
+export PUBLIC_URL=.
+npm run build
+# 進入 build 資料夾
+cd build
+# git 初始化
+git init
+git add -A
+git commit -m 'deploy'
+# 上傳
+git push -f https://github.com/wp900622/helloworld master
+cd -
